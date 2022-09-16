@@ -1,3 +1,118 @@
+# My Contact List App - ReactJS 🚀
+
+![alt text](/src/images/contactList.jpg)
+
+
+## ⭐ Introduction 
+
+This is a Contact list App. Tools used are React, Tailwind and Javascript. It is a responsive web application. CRUD operations can be performed on contacts. State is managed using react useReducer hook and Context API.
+
+
+ Folder and Components Structure
+                            
+            
+    
+            ├── Components     
+            │   ├── AddContact.jsx
+            │   ├── Card.jsx
+            │   ├── CardDetail.jsx
+            │   ├── ContactDetails.jsx
+            │   └── EditContact.jsx
+            ├── images
+            │   ├── contactList.jpg
+            │   ├── deleteContact.jpg
+            │   ├── editContact.jpg
+            │   ├── newContact.jpg
+            │   └── showcontact.jpg
+            ├── Reducer
+            │   └── Reducer.jsx
+            ├── App.jsx    
+            ├── index.css
+            └── index.js
+    
+            
+
+                             App--------Reducer
+                 _____________|___________
+                |                         |           
+            AddContact                   Card
+                |                         |
+           ContactDetails            CardDetail
+                                          |
+                                     EditContact
+                                          |
+                                    ContactDetails     
+             
+                   
+𝐔𝐬𝐞𝐫 𝐒𝐭𝐨𝐫𝐢𝐞𝐬
+
+- Users should be able to view and edit contact List
+
+- Users should be able to add new contact or delete a  contact. 
+
+
+𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬
+
+- Fetch and show users from the api - https://jsonplaceholder.typicode.com/users
+- Add a contact, make a POST call to the above url (from where you are fetching) and save the contact in react state. (This will be a dummy request, you won’t be able to add contacts to the server. But the request is valid and will send you some data. Read the guide).
+- Update a contact, make a PUT call to the above url. (Again this is a dummy call).
+- Delete a contact, make a DELETE call to the above url. (Again this is a dummy call).
+
+<br/>
+<br/>
+
+### 🛠️ Tools Used
+
+<p align="justify">
+<img height="140" width="140" src="https://ik.imagekit.io/garbagevalue/garbage/tags/ReactJS_ne_91IZ6n.webp">
+<img height="140" width="140" src="https://user-images.githubusercontent.com/76626529/135654695-ca008e4f-99c8-40fc-9b73-8573f03c2867.png">
+<img height="140" width="140" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png">
+<img height="140" width="140" src="https://logodix.com/logo/470309.png">
+<img height="140" width="140" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+<img height="140" width="140" src="https://code.visualstudio.com/assets/apple-touch-icon.png">
+<img height="140" width="140" src="https://bourhaouta.gallerycdn.vsassets.io/extensions/bourhaouta/tailwindshades/0.0.5/1592520164095/Microsoft.VisualStudio.Services.Icons.Default">
+</p>
+
+
+<br/>
+<br/>
+
+
+-  Packages:
+   -  react
+   -  react-dom
+   -  react-click-away-listener
+   -  react-scripts
+   -  react-spinners
+   -  react-toastify
+   -  autoprefixer
+   -  postcss
+   -  tailwindcss
+   
+-  Library: ReactJS
+-  Programming / Scripting: JavaScript
+-  Front-End: HTML, CSS
+-  Runtime Environment: NodeJS
+-  Integrated Development Environment: VSCode
+
+<br/>
+<br/>
+
+## 💻 Screens
+
+![alt text](/src/images/showContact.jpg)
+![alt text](/src/images/editContact.jpg)
+![alt text](/src/images/deleteContact.jpg)
+![alt text](/src/images/newContact.jpg)
+
+
+<br/>
+
+I hope you like the project. Thank you for your time 😄
+
+<br/>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
