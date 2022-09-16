@@ -54,9 +54,9 @@ This is a Contact list App. Tools used are React, Tailwind and Javascript. It is
 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬
 
 - Fetch and show users from the api - https://jsonplaceholder.typicode.com/users
-- Add a contact, make a POST call to the above url (from where you are fetching) and save the contact in react state. (This will be a dummy request, you won’t be able to add contacts to the server. But the request is valid and will send you some data. Read the guide).
-- Update a contact, make a PUT call to the above url. (Again this is a dummy call).
-- Delete a contact, make a DELETE call to the above url. (Again this is a dummy call).
+- Add a contact, make a POST call to the above url (from where you are fetching) and save the contact in react state. (This will be a dummy request, you won’t be able to add contacts to the server. But the request is valid and will send you some data.).
+- Update a contact, making a PUT call to the above url. (Again this is a dummy call).
+- Delete a contact, making a DELETE call to the above url. (Again this is a dummy call).
 
 <br/>
 <br/>
@@ -101,8 +101,11 @@ This is a Contact list App. Tools used are React, Tailwind and Javascript. It is
 ## 💻 Screens
 
 ![alt text](/src/images/showContact.jpg)
+
 ![alt text](/src/images/editContact.jpg)
+
 ![alt text](/src/images/deleteContact.jpg)
+
 ![alt text](/src/images/newContact.jpg)
 
 

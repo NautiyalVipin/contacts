@@ -36,8 +36,8 @@ let createObject =  {
 const context = createContext();
 
 /* ------------------------------------- Component Structure  ------------------------------------
-                            
-                                 App--------Reducer
+                   
+                       App--------Reducer
                  _________________|_______________
                 /                                 \           
             AddContact                           Card
@@ -47,9 +47,11 @@ const context = createContext();
                                                   EditContact
                                                         \
                                                   ContactDetails     
-   
-                                            
+             
+
+
 */
+
 
 
 
