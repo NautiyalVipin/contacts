@@ -10,7 +10,7 @@ const CardDetail = () => {
 
     const { state, dispatch } = useContext(context); //Loading Global state and dispatch using Context API  
 
-    //Deleting contact using DELETE method  
+    //Deleting contact using DELETE method running in the same component
     const deleteContact = async () => {
         
                 dispatch({type:"toggleLoader"})

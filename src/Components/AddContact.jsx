@@ -1,4 +1,4 @@
-import ContactDetails from "./ContactDetails";
+import ContactLayout from "./ContactLayout";
 import { context } from "../App";
 import { useContext } from "react";
 import { ClipLoader } from "react-spinners";
@@ -12,7 +12,7 @@ const AddContact =()=>{
      
   const { state, dispatch } = useContext(context); // Loading global State and dispatch using Context
 
-// Adding contact using POST method of fetch API
+// Adding contact using POST method of fetch API called inside contactDetails component
       const addContact = async () => {
       dispatch({type:"toggleLoader"})
    
@@ -58,9 +58,9 @@ const AddContact =()=>{
           >
             X
           </button>
-            <ContactDetails
-        contactHandle={addContactHandle}
-        addContact={addContact}
+            <ContactLayout
+        changeHandle={addContactHandle}
+        onSubmit={addContact}
         contact={state.addBody}
         type={"Add Contact"}
         formAction={"POST"}

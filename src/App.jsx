@@ -6,48 +6,23 @@ import Reducer from "./Reducer/Reducer";
 import Card from "./Components/Card";
 import AddContact from "./Components/AddContact"
 
-// Contact items Layout
-let createObject =  {
-    id:3,
-    name: "Leanne Graham",
-    username: "Bret",
-    email: "Sincere@april.biz",
-    address: {
-      street: "Kulas Light",
-      suite: "Apt. 556",
-      city: "Gwenborough",
-      zipcode: "92998-3874",
-      geo: {
-        lat: "-37.3159",
-        lng: "81.1496"
-      }
-    },
-    phone: "1-770-736-8031 x56442",
-    website: "hildegard.org",
-    company: {
-      name: "Romaguera-Crona",
-      catchPhrase: "Multi-layered client-server neural-net",
-      bs: "harness real-time e-markets"
-    }
-  }
-
 
 // Creating Context
 const context = createContext();
 
 /* ------------------------------------- Component Structure  ------------------------------------
                    
-                       App--------Reducer
+                       App--------Reducer and Context API
                  _________________|_______________
                 /                                 \           
-            AddContact                           Card
+            AddContact                  Card (props:contact)
               /                                     \
-      ContactDetails                             CardDetail
-                                                      \
-                                                  EditContact
+      ContactLayout                             CardDetail
+(Props:ChangeHandler,editContact,editBody)            \
+                                                   EditContact
                                                         \
-                                                  ContactDetails     
-             
+                                                    ContactLayout
+                          (Props:ChangeHandler,editContact,editBody)     
 
 
 */
@@ -67,11 +42,11 @@ function App() {
   const [state, dispatch] = useReducer(Reducer, {
     contactList:[],
     addingContact:false,
-    addBody:{...createObject},
-    editBody:{},
     editingContact:false,
     showDetails:false,
     deletingContact:false,
+    addBody:{...createObject},
+    editBody:{},
     loader:false,
     homeLoader:false,
     notifyAdd:notifyAdd,
@@ -125,12 +100,11 @@ function App() {
               <ClipLoader color="black"></ClipLoader>
             </div>
           ) : (
-            state.contactList?.map((e,index) => {
+            state.contactList?.map((element) => {
               return (
                 <Card
-                  key={index}
-                  id={index+1}
-                  item={e}
+                  key={element.id+element.username}
+                  contact={element}
                 />
               );
             })
@@ -162,6 +136,30 @@ const style={
 
 }
 
+// Contact items Layout
+let createObject =  {
+  id:3,
+  name: "Leanne Graham",
+  username: "Bret",
+  email: "Sincere@april.biz",
+  address: {
+    street: "Kulas Light",
+    suite: "Apt. 556",
+    city: "Gwenborough",
+    zipcode: "92998-3874",
+    geo: {
+      lat: "-37.3159",
+      lng: "81.1496"
+    }
+  },
+  phone: "1-770-736-8031 x56442",
+  website: "hildegard.org",
+  company: {
+    name: "Romaguera-Crona",
+    catchPhrase: "Multi-layered client-server neural-net",
+    bs: "harness real-time e-markets"
+  }
+}
 
 export default App;
 export {context};

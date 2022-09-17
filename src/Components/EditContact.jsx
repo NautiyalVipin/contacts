@@ -1,4 +1,4 @@
-import ContactDetails from "./ContactDetails";
+import ContactLayout from "./ContactLayout";
 import { context } from "../App";
 import { useContext } from "react";
 
@@ -10,7 +10,7 @@ import { useContext } from "react";
 const EditContact =()=>{
       const { state, dispatch } = useContext(context); // Loading global State and dispatch using Context
 
-      // Editing Contact using PUT method of fetch API
+      // Editing Contact using PUT method of fetch API, called inside ContactDetails Component
       const editContact = async () => {
             dispatch({type:"toggleLoader"})
             const response = await fetch(`https://jsonplaceholder.typicode.com/users/${state.editBody.id}`, {
@@ -36,17 +36,17 @@ const EditContact =()=>{
         
         
       // Changing the editbody state  on input change 
-      const editContactHandle = (event)=>{
+      const editChangeHandle = (event)=>{
             const {value,name} = event.target;
             dispatch({type:"editContactHandler",fieldname:name,payload:value})
             
           }
 
         return (<
-        ><ContactDetails
+        ><ContactLayout
          contact={state.editBody}
-         contactHandle={editContactHandle}
-         addContact={editContact}
+         changeHandle={editChangeHandle}
+         onSubmit={editContact}
          type={"Edit Contact"}
          formAction={"PUT"}
          isEditing={!state.editingContact}

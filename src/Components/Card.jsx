@@ -9,7 +9,7 @@ import { context } from "../App";
 
 const Card = (props) => {
    
-    const {item } = props; //All the details of the contact item 
+    const {contact } = props; //All the details of the contact item 
     const { state, dispatch } = useContext(context); //Loading Global state and dispatch using Context API  
  
   
@@ -19,7 +19,7 @@ const Card = (props) => {
     {state.showDetails && <CardDetail/>}
     <section
       onClick={() => {
-        dispatch({type:"loadEdit",payload:item})
+        dispatch({type:"loadEdit",payload:contact})
         dispatch({type:"showDetails"})
     }}
         
@@ -29,13 +29,13 @@ const Card = (props) => {
       <div className={style.card}>
         <h3>Username</h3>
         <span>&nbsp;:</span>
-        <h3 className={style.cardItem}>{item.username}</h3>
+        <h3 className={style.cardItem}>{contact.username}</h3>
         <h3>Name</h3>
         <span>&nbsp;:</span>
-        <h3 className={style.cardItem}>{item.name}</h3>
+        <h3 className={style.cardItem}>{contact.name}</h3>
         <h3>Email</h3>
         <span>&nbsp;:</span>
-        <h3 className={style.cardItem}> {item.email}</h3>
+        <h3 className={style.cardItem}> {contact.email}</h3>
       </div>
     </section>
     </>
